@@ -44,7 +44,7 @@ m2df <- function(mymatrix, column_name = "Row_variable"){
   return(mydf)
 }
 
-write_neat_xslx <- function(dataframe_list.l, output_filename){
+write_neat_xlsx <- function(dataframe_list.l, output_filename){
   
   # Create workbook
   wb <- createWorkbook()
@@ -365,6 +365,6 @@ for (tax_string_level in tax_levels.v){
 # openxlsx::write.xlsx(c(coverages.l,list("microbial_fractions" = singlem_microbial_fractions.df)), file = "SingleM_coverages.xlsx" ,overwrite = T)
 # openxlsx::write.xlsx(c(abundances.l, list("microbial_fractions" = singlem_microbial_fractions.df)), file = "SingleM_abundances.xlsx" ,overwrite = T)
 # openxlsx::write.xlsx(c(abundances_scaled.l, list("microbial_fractions" = singlem_microbial_fractions.df)), file = "SingleM_scaled_abundances.xlsx" ,overwrite = T)
-write_neat_xslx(c(coverages.l,list("microbial_fractions" = singlem_microbial_fractions.df)), output_filename = "SingleM_coverages.xlsx")
-write_neat_xslx(c(abundances.l,list("microbial_fractions" = singlem_microbial_fractions.df)), output_filename = "SingleM_abundances.xlsx")
-write_neat_xslx(c(abundances_scaled.l,list("microbial_fractions" = singlem_microbial_fractions.df)), output_filename = "SingleM_scaled_abundances.xlsx")
+write_neat_xlsx(c(coverages.l,list("microbial_fractions" = singlem_microbial_fractions.df)), output_filename = "SingleM_coverages.xlsx")
+write_neat_xlsx(c(abundances.l,list("microbial_fractions" = singlem_microbial_fractions.df)), output_filename = "SingleM_abundances.xlsx")
+write_neat_xlsx(c(abundances_scaled.l,list("microbial_fractions" = singlem_microbial_fractions.df)), output_filename = "SingleM_scaled_abundances.xlsx")
